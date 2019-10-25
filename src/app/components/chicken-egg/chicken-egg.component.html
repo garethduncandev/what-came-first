@@ -1,0 +1,15 @@
+<h2>The code</h2>
+
+<code><pre>{{code}}</pre></code>
+
+<p><button (click)="tellMeTheAnswer()"  *ngIf="!showAnswer">Tell me the answer!!</button></p>
+
+<div *ngIf="showAnswer">
+	<h2>Answer</h2>
+	<ol>
+		<li *ngFor="let item of data">{{item}}</li>
+	</ol>
+  <p>Computer says {{data[0]}}, must be right 🙃</p>
+</div>
+
+<p><button (click)="startAgain()" *ngIf="showAnswer">Start again ⚡</button></p>
